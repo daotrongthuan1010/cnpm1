@@ -19,6 +19,8 @@ public class PhieuXuatSanPham {
     @JoinColumn(name="sanpham_id", nullable=false)
     private SanPham sanPham;
 
+    private int soLuong;
+
 
 
 

@@ -28,7 +28,14 @@ public class DaiLyConServiceIpm implements DaiLyConService {
 
         obj.forEach(x->
         {  DaiLyConDTO daiLyConDTO = new DaiLyConDTO();
+            StringBuffer buffer = new StringBuffer();
+            buffer.append(String.valueOf(x.get("ngayxuat")));
             daiLyConDTO.setStt(String.valueOf(1));
+            System.out.println(buffer);
+            String.valueOf(buffer);
+
+
+            daiLyConDTO.setNgayXuat(  String.valueOf(buffer));
             daiLyConDTO.setDaiLy(String.valueOf(x.get("ten")));
             daiLyConDTO.setSoLuong(String.valueOf(x.get("soluong")));
             daiLyConDTO.setTongTien(String.valueOf(x.get("doanhthu")));

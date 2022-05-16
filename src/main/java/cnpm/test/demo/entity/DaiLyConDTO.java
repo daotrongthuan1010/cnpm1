@@ -10,7 +10,6 @@ import java.util.Date;
 public class DaiLyConDTO {
 
     private String stt;
-
     private String ngayXuat;
     private String daiLy;
     private String soLuong;

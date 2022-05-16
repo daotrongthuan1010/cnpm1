@@ -39,7 +39,7 @@
 
                 <hr class="row brc-default-l1 mx-n1 mb-4" />
 
-                <table class="table table-dark table-striped">
+                <table class="table table-primary table-striped">
                     <thead>
                     <tr>
                         <th>TT</th>
@@ -52,10 +52,10 @@
                     </thead>
                     <tbody>
 
-                    <tr th:each="list : ${listSanPham}" >
-                        <td th:text="${list.stt}"></td>
+                    <tr th:each="list, state : ${listSanPham}" >
+                        <td th:text="${state.index}"></td>
                       <td th:text="${list.id}"></td>
-                        <td th:text="${list.ten}"></td>  <a th:href="@{/thong-ke/dai-ly-san-pham?id={id}(id=${list.id})}">a</a>
+                        <td ><a th:href="@{/thong-ke/dai-ly-san-pham?id={id}(id=${list.id})}"><span th:text="${list.ten}"></span></a></td>
                     <td th:text="${list.soLuong}"></td>
                         <td th:text="${list.doanhThu}"></td>
 

@@ -31,11 +31,12 @@
 
                 <hr class="row brc-default-l1 mx-n1 mb-4" />
 
-                <table class="table table-dark table-striped">
+                <table class="table table-primary table-striped">
                     <thead>
                     <tr>
                         <th>TT</th>
                         <th>ID</th>
+                        <th>Ngày xuất</th>
                         <th>Tên</th>
                         <th>Số lượng</th>
                         <th>Doanh Thu</th>
@@ -44,9 +45,10 @@
                     </thead>
                     <tbody>
 
-                    <tr th:each="list : ${listDaiLyCon}" >
+                    <tr th:each="list, state : ${listDaiLyCon}" >
+                        <td th:text="${state.index}"></td>
                         <td th:text="${list.stt}"></td>
-<!--                        <td th:text="${list.ngayxuat}"></td>-->
+                        <td th:text="${list.ngayXuat}"></td>
                          <td th:text="${list.daiLy}"></td>
                         <td th:text="${list.soLuong}"></td>
                         <td th:text="${list.tongTien}"></td>
